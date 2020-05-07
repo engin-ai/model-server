@@ -18,7 +18,6 @@ def predict():
         image_url = request.form.get('url')
         print(image_url)
         img = Image.open(requests.get(image_url, stream=True).raw)
-        
     return {'imgsize':img.size}
 
 @app.route('/submit', methods=['POST'])
