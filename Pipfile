@@ -57,7 +57,6 @@ Keras-Applications = "==1.0.8"
 Keras-Preprocessing = "==1.1.0"
 Markdown = "==3.2.1"
 PyYAML = "==5.3.1"
-tensorflow = "==1.14"
 
 [requires]
 python_version = "3.7.2"
