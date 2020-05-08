@@ -1,12 +1,12 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "871055d2e5ca121ab478a7fae18ea91b2287e4968e60c75c341a86271b1b1400"
+            "sha256": "3930c03f8759fb587ba6aec631b73f43997f89d360e6ea0c84120a34d028a540"
         },
         "pipfile-spec": 6,
         "requires": {
-            "pip": "20.0",
-            "python_version": "3.8"
+            "pip": "20.0.2",
+            "python_version": "3.7"
         },
         "sources": [
             {
@@ -612,7 +612,7 @@
                 "sha256:d1694e25887bc0d0c31d6c7d9c92c8bf9e0499085c7e5a9dbaacf675c44027a8"
             ],
             "index": "pypi",
-            "version": "==1.15"
+            "version": "==1.15.0"
         },
         "tensorflow-estimator": {
             "hashes": [
