@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, render_template, request, jsonify
 from PIL import Image
 import requests
 #from models import get_model
@@ -44,7 +44,7 @@ def predict():
                  "length":"2m",
                  "confidence":"0.94"
                 }
-    return {'imgsize':img.size,'damage':results,"detection_img_url":"https://res.cloudinary.com/dqwgbheqj/image/upload/v1588969686/00234_j8rc5k_dyi2pl.jpg"}
+    return jsonify(dict({'imgsize':img.size,'damage':results,"detection_img_url":"https://res.cloudinary.com/dqwgbheqj/image/upload/v1588969686/00234_j8rc5k_dyi2pl.jpg"}))
 
 @app.route('/submit', methods=['POST'])
 def submit():
