@@ -23,22 +23,22 @@ def prepare_image(img):
     return np.array([img])
 
 
-@app.route('/predict',methods =['POST'])
+@app.route('/predict')
 def predict():
-    if request.method=='POST':
-        image_url = request.form.get('url')
-        print(image_url)
-        img = np.array(Image.open(requests.get(image_url, stream=True).raw))
-        #img= prepare_image(img)
-        #pred = model.predict(img)[0]
-        #indxs = np.argsort(pred)[-3:]
-        #preds  = pred[indxs]
-        #results ={}
-        convert = {0:'None', 1:'PC', 2:'DC', 3:'FB',4:'FL', 5:'PCH',6:'DSU', 7:'BCH'}
-        #for j,k in zip(indxs,preds):
-            #results[convert[j]]=float(k)
-        #import pdb;pdb.set_trace()
-        results = {
+    #if request.method=='POST':
+    #image_url = request.form.get('url')
+    print(image_url)
+    img = np.array(Image.open(requests.get(image_url, stream=True).raw))
+    #img= prepare_image(img)
+    #pred = model.predict(img)[0]
+    #indxs = np.argsort(pred)[-3:]
+    #preds  = pred[indxs]
+    #results ={}
+    convert = {0:'None', 1:'PC', 2:'DC', 3:'FB',4:'FL', 5:'PCH',6:'DSU', 7:'BCH'}
+    #for j,k in zip(indxs,preds):
+    #results[convert[j]]=float(k)
+    #import pdb;pdb.set_trace()
+    results = {
                 "name": "FPC",
                  "width":"3m",
                  "length":"2m",
